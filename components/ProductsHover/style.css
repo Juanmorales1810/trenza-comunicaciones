@@ -1,0 +1,183 @@
+/* @import 'normalize.css' layer(normalize); */
+@import url("https://unpkg.com/normalize.css") layer(normalize);
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.2em;
+    grid-area: 1 / 1;
+    opacity: 0;
+    transition: opacity 0.25s 0s;
+    mix-blend-mode: plus-lighter;
+    box-shadow: 0px 0.2px 0.2px var(--shadow-color),
+        0.1px 1.4px 1.6px -0.4px var(--shadow-color),
+        0.1px 2.7px 3px -0.7px var(--shadow-color),
+        0.2px 4.4px 5px -1.1px var(--shadow-color),
+        0.3px 7px 7.9px -1.4px var(--shadow-color),
+        0.4px 10.9px 12.3px -1.8px var(--shadow-color),
+        0.6px 16.6px 18.7px -2.1px var(--shadow-color),
+        0.9px 24.4px 27.5px -2.5px var(--shadow-color);
+}
+.box {
+    display: grid;
+    isolation: isolate;
+}
+
+.container:has(li:nth-of-type(1):hover) .box img:nth-of-type(1),
+.container:has(li:nth-of-type(2):hover) .box img:nth-of-type(2),
+.container:has(li:nth-of-type(3):hover) .box img:nth-of-type(3),
+.container:has(li:nth-of-type(4):hover) .box img:nth-of-type(4),
+.container:has(li:nth-of-type(5):hover) .box img:nth-of-type(5) {
+    opacity: var(--opacity, 1);
+    z-index: 2;
+    transition-delay: 0s;
+}
+.holder:nth-of-type(1) .box {
+    --prx: -80%;
+    --pry: 15%;
+}
+
+.holder:nth-of-type(2) .box {
+    --prx: 25%;
+    --pry: -35%;
+}
+
+.holder:nth-of-type(3) .box {
+    --prx: 30%;
+    --pry: 35%;
+}
+
+.holder {
+    width: 2lh;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    scale: 0;
+}
+
+ul:has(li:is(:hover, :focus-within)) + .holding .box {
+    scale: 1;
+}
+
+.holder:nth-of-type(1) {
+    left: unset;
+    right: 100%;
+    top: 50%;
+    translate: -50% -50%;
+}
+.holder:nth-of-type(2) {
+    left: 100%;
+    top: 50%;
+    translate: 50% -50%;
+}
+.holder:nth-of-type(3) {
+    left: 50%;
+    bottom: 100%;
+    top: unset;
+    translate: -50% -50%;
+}
+
+.holding {
+    position-anchor: --active;
+    top: anchor(top);
+    left: 50%;
+    translate: -50% 0;
+    width: anchor-size(width);
+    transition: top 0.2s, width 0.2s;
+}
+
+.holding {
+    left: 50%;
+    translate: -50% 0;
+    top: calc(var(--start-index) * 1lh);
+    transition: translate var(--translate-speed);
+}
+.scope {
+    translate: 0% calc(var(--active-index, 0) * 1lh);
+    transition: width 0.2s, translate var(--translate-speed);
+}
+
+section {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+.holding {
+    pointer-events: none;
+    width: 100%;
+    height: 1lh;
+    position: absolute;
+    top: 0lh;
+}
+
+.scope {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+ul {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+li {
+    display: inline-block;
+}
+
+ul:has(li:is(:hover, :focus-within)) + .holding {
+    opacity: 1;
+}
+
+li:is(:hover, :focus-within) a {
+    opacity: 1;
+    scale: 1 1.15;
+}
+li a {
+    display: inline-block;
+    color: inherit;
+    outline-width: 0;
+    outline-color: #0000;
+    text-decoration: none;
+    opacity: 0.3;
+    transition-property: opacity, scale;
+    transition-duration: 0.2s, 0.875s;
+    transition-timing-function: ease, var(--elastic);
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+:where(.fluid) {
+    --fluid-min: calc(
+        var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level, 0))
+    );
+    --fluid-max: calc(
+        var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level, 0))
+    );
+    --fluid-preferred: calc(
+        (var(--fluid-max) - var(--fluid-min)) /
+            (var(--font-width-max) - var(--font-width-min))
+    );
+    --fluid-type: clamp(
+        (var(--fluid-min) / 16) * 1rem,
+        ((var(--fluid-min) / 16) * 1rem) -
+            (((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) +
+            (var(--fluid-preferred) * var(--variable-unit, 100vi)),
+        (var(--fluid-max) / 16) * 1rem
+    );
+}
