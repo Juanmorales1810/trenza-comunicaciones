@@ -3,6 +3,7 @@ import React from "react";
 import Clients from "../clients";
 import { Chart } from "../chart";
 import { ParallaxCarousel } from "../parallax-carousel";
+import Marquee from "../marquee";
 
 export default function Hero() {
     return (
@@ -48,15 +49,21 @@ export default function Hero() {
                     <Clients />
                 </div>
                 <div className="relative row-span-3 col-start-1 row-start-7 bg-slate-500 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group hover:z-50">
-                    3
+                    <Image
+                        className="brightness-[1.25] w-full h-full dark:brightness-[0.25] object-fill"
+                        src="/image/hero/text.jpeg"
+                        alt="hero"
+                        width={600}
+                        height={400}
+                    />
                 </div>
-                <div className="relative row-span-3 col-start-2 row-start-7 bg-slate-500 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group hover:z-50">
-                    4
+                <div className="relative row-span-3 col-start-2 row-start-7 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group place-content-center hover:z-50 bg-[url(/image/hero/marquee.jpeg)] bg-cover bg-center bg-no-repeat">
+                    <Marquee />
                 </div>
-                <div className="relative row-span-5 col-start-3 row-start-1 bg-slate-200 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group hover:z-50">
+                <div className="relative row-span-5 col-start-3 row-start-1 bg-slate-200 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group hover:z-50 bg-[url(/image/hero/chart.jpeg)] bg-cover bg-center bg-no-repeat">
                     <Chart />
                 </div>
-                <div className="relative row-span-4 col-start-3 row-start-6 bg-slate-500 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group hover:z-50">
+                <div className="relative row-span-4 col-start-3 row-start-6 rounded-xl  hover:scale-110 hover:shadow-lg transition-[transform_shadow] duration-300 ease-in-out overflow-hidden group hover:z-50">
                     <ParallaxCarousel />
                 </div>
             </div>
