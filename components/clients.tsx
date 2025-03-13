@@ -5,6 +5,7 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
+import Image from "next/image";
 
 interface Providers {
     logo: string;
@@ -66,7 +67,7 @@ function TestimonialCard({ providers }: { providers: Providers }) {
     return (
         <article className="h-full flex justify-center items-center bg-transparent border-0 hover:bg-zinc-400/15 hover:border-zinc-50/20 transition-colors rounded-xl">
             <div className="p-10 text-black">
-                <img
+                <Image
                     src={providers.logo}
                     alt="Logo de clientes"
                     height={80}
