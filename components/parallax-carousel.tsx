@@ -15,21 +15,21 @@ interface CarouselItem {
 const items: CarouselItem[] = [
     {
         id: 1,
-        title: "Naturaleza",
-        description: "Explora paisajes impresionantes",
-        imageUrl: "/placeholder.svg",
+        title: "Marketing",
+        description: "Estrategias efectivas",
+        imageUrl: "/image/hero/marketing.jpeg",
     },
     {
         id: 2,
-        title: "Arquitectura",
-        description: "Descubre estructuras fascinantes",
-        imageUrl: "/placeholder.svg",
+        title: "Redes Sociales",
+        description: "Gestión de redes sociales",
+        imageUrl: "/image/hero/redes-sociales.jpeg",
     },
     {
         id: 3,
-        title: "Tecnología",
-        description: "Innovación y futuro",
-        imageUrl: "/placeholder.svg",
+        title: "Desarrollo Web",
+        description: "Diseño y desarrollo de sitios web",
+        imageUrl: "/image/hero/ui-ux-representations-with-laptop.jpg",
     },
 ];
 
@@ -41,13 +41,13 @@ export function ParallaxCarousel() {
         offset: ["start start", "end start"],
     });
 
-    const yValues = items.map((_, index) => {
-        return useTransform(
-            scrollYProgress,
-            [0, 1],
-            [0, index % 2 === 0 ? 100 : -100]
-        );
-    });
+    // Definir los valores de transformación en el nivel superior del componente
+    const yValue0 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+    const yValue1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    const yValue2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+
+    // Crear un array con los valores de transformación
+    const yValues = [yValue0, yValue1, yValue2];
 
     const goToSlide = (index: number) => {
         setCurrentIndex(index);
@@ -107,10 +107,10 @@ export function ParallaxCarousel() {
                             }
                             transition={{ duration: 0.5 }}
                         >
-                            <h2 className="text-3xl font-bold mb-2">
+                            <h2 className="text-2xl font-bold mb-1">
                                 {item.title}
                             </h2>
-                            <p className="text-xl">{item.description}</p>
+                            <p className="text-md">{item.description}</p>
                         </motion.div>
                     </motion.div>
                 );
