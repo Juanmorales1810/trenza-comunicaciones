@@ -1,22 +1,25 @@
 import { ArrowRightIcon, ChevronRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 export default function WhyUs() {
     return (
         <section className="relative py-32">
-            <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(85,100,231,0.5)] opacity-50 blur-[80px]"></div>
+            <div className="absolute -z-10 bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(85,100,231,0.5)] opacity-50 blur-[80px]"></div>
             <div className="container mx-auto px-4">
                 <div className="flex flex-col gap-8 md:flex-row">
                     <div className="aspect-[5/6] overflow-clip rounded-3xl bg-accent">
-                        <img
-                            src="/placeholder.svg"
+                        <Image
+                            src="/image/whyus/why-us.jpeg"
                             alt="placeholder"
                             className="h-full w-full object-cover object-center"
+                            width={600}
+                            height={900}
                         />
                     </div>
                     <div className="flex shrink-0 flex-col justify-center md:w-1/2 md:py-16 lg:mr-8 lg:pl-24 lg:text-left 2xl:pl-32">
                         <p className="mb-6 text-xs font-medium uppercase tracking-wider">
-                            Tag Line
+                            Por qué elegirnos
                         </p>
                         <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-5xl">
                             Tu Socio Estratégico en Marketing Digital
