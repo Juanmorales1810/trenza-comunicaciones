@@ -8,7 +8,7 @@ import {
     useTransform,
     useMotionValue,
     useVelocity,
-    useAnimationFrame
+    useAnimationFrame,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
@@ -18,16 +18,20 @@ interface ParallaxProps {
     className?: string;
 }
 
-function ParallaxText({ children, baseVelocity = 100, className }: ParallaxProps) {
+function ParallaxText({
+    children,
+    baseVelocity = 100,
+    className,
+}: ParallaxProps) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
     const smoothVelocity = useSpring(scrollVelocity, {
         damping: 50,
-        stiffness: 400
+        stiffness: 400,
     });
     const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-        clamp: false
+        clamp: false,
     });
 
     /**
@@ -64,8 +68,13 @@ function ParallaxText({ children, baseVelocity = 100, className }: ParallaxProps
      * dynamically generated number of children.
      */
     return (
-        <div className={`overflow-hidden tracking-[-2px] leading-[0.8] m-0 whitespace-nowrap flex flex-nowrap ${className}`}>
-            <motion.div className="font-medium uppercase text-5xl flex whitespace-nowrap flex-nowrap text-zinc-50" style={{ x }}>
+        <div
+            className={`overflow-hidden tracking-[-2px] leading-[0.8] m-0 whitespace-nowrap flex flex-nowrap ${className}`}
+        >
+            <motion.div
+                className="font-medium uppercase text-5xl flex whitespace-nowrap flex-nowrap text-zinc-50"
+                style={{ x }}
+            >
                 <span className="pl-3">{children} </span>
                 <span className="pl-3">{children} </span>
                 <span className="pl-3">{children} </span>
@@ -82,7 +91,14 @@ function ParallaxText({ children, baseVelocity = 100, className }: ParallaxProps
 export default function Marquee() {
     return (
         <section className="[background-image:radial-gradient(rgba(0,0,0,0)_1px,var(--background)_1px)] [background-size:4px_4px] [backdrop-filter:blur(3px)] z-40">
-            <ParallaxText baseVelocity={0.5} className="w-full">En Proceso En Proceso En Proceso En Proceso En Proceso En Proceso En Proceso En Proceso En Proceso</ParallaxText>
+            <ParallaxText baseVelocity={0.5} className="w-full">
+                En Proceso En Proceso En Proceso En Proceso En Proceso En
+                Proceso En Proceso En Proceso En Proceso
+            </ParallaxText>
+            <ParallaxText baseVelocity={-0.5} className="w-full">
+                En Proceso En Proceso En Proceso En Proceso En Proceso En
+                Proceso En Proceso En Proceso En Proceso
+            </ParallaxText>
         </section>
     );
 }
