@@ -1,10 +1,6 @@
-/* @import 'normalize.css' layer(normalize); */
-@import url("https://unpkg.com/normalize.css") layer(normalize);
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-
 .box img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 0.2em;
     grid-area: 1 / 1;
@@ -50,7 +46,7 @@
 }
 
 .holder {
-    width: 2lh;
+    /* width: 2lh; */
     aspect-ratio: 1;
     position: absolute;
     left: 50%;
@@ -69,7 +65,7 @@ ul:has(li:is(:hover, :focus-within)) + .holding .box {
 
 .holder:nth-of-type(1) {
     left: unset;
-    right: 100%;
+    right: 90%;
     top: 50%;
     translate: -50% -50%;
 }
@@ -86,16 +82,7 @@ ul:has(li:is(:hover, :focus-within)) + .holding .box {
 }
 
 .holding {
-    position-anchor: --active;
-    top: anchor(top);
-    left: 50%;
-    translate: -50% 0;
-    width: anchor-size(width);
-    transition: top 0.2s, width 0.2s;
-}
-
-.holding {
-    left: 50%;
+    left: 0%;
     translate: -50% 0;
     top: calc(var(--start-index) * 1lh);
     transition: translate var(--translate-speed);
@@ -103,14 +90,6 @@ ul:has(li:is(:hover, :focus-within)) + .holding .box {
 .scope {
     translate: 0% calc(var(--active-index, 0) * 1lh);
     transition: width 0.2s, translate var(--translate-speed);
-}
-
-section {
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
 }
 .holding {
     pointer-events: none;
