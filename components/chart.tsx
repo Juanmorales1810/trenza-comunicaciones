@@ -38,7 +38,7 @@ export function Chart() {
         <Card className="bg-transparent shadow-none border-none">
             <CardHeader>
                 <CardTitle>Aumenta tus visitas con nosotros</CardTitle>
-                <CardDescription>
+                <CardDescription className="text-zinc-800">
                     Mostrando el rendimiento de los últimos 6 meses
                 </CardDescription>
             </CardHeader>
@@ -61,7 +61,7 @@ export function Chart() {
                             tickFormatter={(value) => value.slice(0, 3)}
                         />
                         <ChartTooltip
-                            cursor={false}
+                            cursor={true}
                             content={<ChartTooltipContent />}
                         />
                         <defs>
@@ -73,7 +73,7 @@ export function Chart() {
                                 y2="1"
                             >
                                 <stop
-                                    offset="5%"
+                                    offset="15%"
                                     stopColor="var(--color-visits)"
                                     stopOpacity={0.4}
                                 />
@@ -128,7 +128,7 @@ export function Chart() {
                             Tu interacciones aumentaron un 56%{" "}
                             <TrendingUp className="h-4 w-4" />
                         </div>
-                        <div className="flex items-center gap-2 leading-none text-muted-foreground">
+                        <div className="flex items-center gap-2 leading-none text-zinc-800">
                             Enero - Junio 2025
                         </div>
                     </div>
