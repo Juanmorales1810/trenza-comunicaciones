@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import Noise from "@/components/noise";
 
 export const metadata: Metadata = {
     title: "Trenza Comunicaciones",
@@ -14,8 +15,15 @@ export default function RootLayout({
     return (
         <html lang="es">
             <body className="relative antialiased bg-zinc-900">
+                <Noise
+                    patternSize={250}
+                    patternScaleX={1}
+                    patternScaleY={1}
+                    patternRefreshInterval={2}
+                    patternAlpha={5}
+                />
                 <div className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:6rem_4rem]">
-                    <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
+                    <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#ed5e2a,transparent)]"></div>
                 </div>
                 {children}
             </body>
