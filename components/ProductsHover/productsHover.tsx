@@ -11,6 +11,10 @@ export default function ProductsHover() {
     const boxesRef = useRef<HTMLDivElement[]>([]);
     const [effectCache, setEffectCache] = useState<EffectSettings[][]>([]);
     const [hoverEffect, setHoverEffect] = useState<EffectSettings[]>([]);
+    const [cursorEffect, setCursorEffect] = useState<{ x: number; y: number }>({
+        x: 0,
+        y: 0,
+    });
 
     const products = [
         "Air Force 1",
@@ -67,27 +71,21 @@ export default function ProductsHover() {
         if (!list) return;
 
         const { clientX: x, clientY: y } = event;
-        const {
-            x: offsetX,
-            y: offsetY,
-            width,
-            height,
-        } = list.getBoundingClientRect();
+        const { x: offsetX, y: offsetY } = list.getBoundingClientRect();
 
-        const px = (x - offsetX) / width - 0.5;
-        const py = (y - offsetY) / height - 0.5;
+        setCursorEffect({ x: x - offsetX, y: y - offsetY });
 
         boxesRef.current.forEach((box) => {
             if (box) {
-                box.style.setProperty("--px", `${px}`);
-                box.style.setProperty("--py", `${py}`);
+                box.style.setProperty("--px", `${x - offsetX}`);
+                box.style.setProperty("--py", `${y - offsetY}`);
             }
         });
     };
 
     return (
         <section className="container mx-auto flex flex-col justify-center items-center h-screen">
-            <h2 className="text-5xl">Products</h2>
+            <h2 className="text-7xl">Products</h2>
             <div
                 className="relative mt-10 flex justify-center items-center"
                 ref={listRef}
@@ -98,13 +96,23 @@ export default function ProductsHover() {
                         <li
                             key={product}
                             onMouseEnter={() => handleHover(index)}
-                            className="text-5xl"
+                            className="text-7xl cursor-pointer"
                         >
                             <a href="#">{product}</a>
                         </li>
                     ))}
                 </ul>
-                <div className="holding">
+
+                {/* 🔹 Efecto de animación que sigue el cursor */}
+                <motion.div
+                    className="holding"
+                    style={{ pointerEvents: "none" }}
+                    animate={{
+                        x: cursorEffect.x,
+                        y: cursorEffect.y,
+                    }}
+                    transition={{ type: "spring", stiffness: 100, damping: 10 }}
+                >
                     <div className="scope">
                         {[...Array(3)].map((_, i) => (
                             <div className="holder" key={i}>
@@ -141,7 +149,9 @@ export default function ProductsHover() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
+
+                {/* 🔹 Efectos originales de hover */}
             </div>
         </section>
     );
