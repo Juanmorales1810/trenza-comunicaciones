@@ -2,13 +2,14 @@ import { Instagram, Linkedin, Twitter } from "lucide-react";
 import React from "react";
 import TextPressure from "../text-pressure";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
         <section className="">
             <div className="w-full px-24 flex justify-between gap-8 border-x border-t py-4 max-md:flex-col lg:py-8">
                 <div className="mb-8 flex-1">
-                    <a href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2">
                         <Image
                             src="/image/logoTrenza.png"
                             alt="logo"
@@ -16,7 +17,7 @@ export default function Footer() {
                             height="32"
                             className="dark:invert"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex flex-1 justify-between gap-8 max-sm:flex-col">
                     <div>
@@ -25,10 +26,10 @@ export default function Footer() {
                         </h3>
                         <ul className="mt-6 space-y-6 text-sm tracking-[-0.28px] lg:mt-8 lg:space-y-8">
                             <li className="hover:text-primary">
-                                <a href="#">Features</a>
+                                <Link href="#">Features</Link>
                             </li>
                             <li className="hover:text-primary">
-                                <a href="#">Pricing</a>
+                                <Link href="#">Pricing</Link>
                             </li>
                         </ul>
                     </div>
@@ -38,10 +39,10 @@ export default function Footer() {
                         </h3>
                         <ul className="mt-6 space-y-6 text-sm tracking-[-0.28px] lg:mt-8 lg:space-y-8">
                             <li className="hover:text-primary">
-                                <a href="/contact">Contact</a>
+                                <Link href="/contact">Contact</Link>
                             </li>
                             <li className="hover:text-primary">
-                                <a href="#">Faq</a>
+                                <Link href="#">Faq</Link>
                             </li>
                         </ul>
                     </div>
@@ -51,7 +52,9 @@ export default function Footer() {
                         </h3>
                         <ul className="mt-6 space-y-6 text-sm tracking-[-0.28px] lg:mt-8 lg:space-y-8">
                             <li className="hover:text-primary">
-                                <a href="/terms-of-service">Terms of Service</a>
+                                <Link href="/terms-of-service">
+                                    Terms of Service
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -60,21 +63,24 @@ export default function Footer() {
                             Social
                         </h3>
                         <div className="text-muted-foreground-subtle mt-6 flex gap-3 lg:mt-8">
-                            <a
+                            <Link
                                 href="https://instagram.com"
                                 aria-label="Instagram"
                             >
                                 <Instagram className="size-5" />
-                            </a>
-                            <a href="https://twitter.com" aria-label="Twitter">
+                            </Link>
+                            <Link
+                                href="https://twitter.com"
+                                aria-label="Twitter"
+                            >
                                 <Twitter className="size-5" />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://Linkedin.com"
                                 aria-label="Linkedin"
                             >
                                 <Linkedin className="size-5" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
