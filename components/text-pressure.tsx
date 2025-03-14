@@ -216,8 +216,9 @@ const TextPressure: React.FC<TextPressureProps> = ({
                 {chars.map((char, i) => (
                     <span
                         key={i}
-                        //@ts-ignore
-                        ref={(el) => (spansRef.current[i] = el)}
+                        ref={(el) => {
+                            spansRef.current[i] = el;
+                        }}
                         data-char={char}
                         className="inline-block"
                     >
