@@ -106,15 +106,12 @@ const testimonials: TestimonialProps[] = [
 
 export default function TestimonialCarousel() {
     const [api, setApi] = useState<CarouselApi>();
-    const [currentIndex, setCurrentIndex] = useState(0);
 
     // Setup the carousel API and event listeners
     useEffect(() => {
         if (!api) return;
 
-        const handleSelect = () => {
-            setCurrentIndex(api.selectedScrollSnap());
-        };
+        const handleSelect = () => {};
 
         api.on("select", handleSelect);
 
@@ -186,7 +183,7 @@ export default function TestimonialCarousel() {
 
                                     {/* Testimonial Quote */}
                                     <p className="text-center text-xl font-semibold lg:text-left lg:text-2xl">
-                                        "{testimonial.quote}"
+                                        &quot;{testimonial.quote}&quot;
                                     </p>
 
                                     {/* Separator */}
