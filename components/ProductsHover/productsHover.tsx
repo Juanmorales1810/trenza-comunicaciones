@@ -85,7 +85,9 @@ export default function ProductsHover() {
 
     return (
         <section className="container mx-auto flex flex-col justify-center items-center h-screen">
-            <h2 className="text-7xl">Products</h2>
+            <h2 className="text-5xl text-center">
+                Servicios Personalizados para Impulsar tu Negocio
+            </h2>
             <div
                 className="relative mt-10 flex justify-center items-center"
                 ref={listRef}
@@ -99,6 +101,10 @@ export default function ProductsHover() {
                             className="text-7xl cursor-pointer"
                         >
                             <a href="#">{product}</a>
+                            <p className="text-lg mt-2">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quisquam, voluptatibus.
+                            </p>
                         </li>
                     ))}
                 </ul>
