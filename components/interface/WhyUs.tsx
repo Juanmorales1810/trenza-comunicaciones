@@ -55,7 +55,7 @@ export default function WhyUs() {
                                             <img
                                                 data-slot="avatar-image"
                                                 className="aspect-square size-full"
-                                                src="/images/block/avatar-1.webp"
+                                                src="/placeholder.svg"
                                             />
                                         </span>
                                         <span
@@ -65,7 +65,7 @@ export default function WhyUs() {
                                             <img
                                                 data-slot="avatar-image"
                                                 className="aspect-square size-full"
-                                                src="/images/block/avatar-3.webp"
+                                                src="/placeholder.svg"
                                             />
                                         </span>
                                         <span
@@ -75,14 +75,14 @@ export default function WhyUs() {
                                             <img
                                                 data-slot="avatar-image"
                                                 className="aspect-square size-full"
-                                                src="/images/block/avatar-2.webp"
+                                                src="/placeholder.svg"
                                             />
                                         </span>
                                     </div>
                                     <ChevronRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                                 </div>
                                 <p className="mt-8 font-medium lg:text-lg">
-                                    Action 1
+                                    Asesórate con nuestros expertos
                                 </p>
                             </a>
                             <a
@@ -92,7 +92,7 @@ export default function WhyUs() {
                                 <div className="flex items-start justify-between">
                                     <div className="flex items-center">
                                         <img
-                                            src="/images/block/block-1.svg"
+                                            src="/placeholder.svg"
                                             alt="placeholder hero"
                                             className="size-12 object-cover object-center"
                                         />
@@ -100,7 +100,7 @@ export default function WhyUs() {
                                     <ChevronRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                                 </div>
                                 <p className="mt-8 font-medium lg:text-lg">
-                                    Action 2
+                                    Conoce nuestros servicios
                                 </p>
                             </a>
                         </div>
