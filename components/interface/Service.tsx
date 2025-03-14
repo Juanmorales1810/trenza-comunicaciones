@@ -74,8 +74,8 @@ const features = [
 
 export default function Service() {
     return (
-        <section className="relative py-32 ">
-            <div className="absolute -z-10 left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#09090b)] blur-xl"></div>
+        <section className="relative py-32 px-2">
+            <div className="absolute hidden -z-10 left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#09090b)] blur-xl lg:block"></div>
             <div className="container">
                 <div className="flex flex-col items-center text-center">
                     <h2 className="mb-4 text-4xl font-semibold tracking-tight sm:text-5xl">
