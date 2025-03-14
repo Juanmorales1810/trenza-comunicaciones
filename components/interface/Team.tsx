@@ -25,7 +25,7 @@ const team = [
                 url: "#",
             },
         ],
-        imageUrl: "/images/block/avatar-1.webp",
+        imageUrl: "/placeholder.svg",
     },
     {
         id: 2,
@@ -50,7 +50,7 @@ const team = [
                 url: "#",
             },
         ],
-        imageUrl: "/images/block/avatar-1.webp",
+        imageUrl: "/placeholder.svg",
     },
     {
         id: 3,
@@ -75,7 +75,7 @@ const team = [
                 url: "#",
             },
         ],
-        imageUrl: "/images/block/avatar-1.webp",
+        imageUrl: "/placeholder.svg",
     },
     {
         id: 4,
@@ -100,7 +100,7 @@ const team = [
                 url: "#",
             },
         ],
-        imageUrl: "/images/block/avatar-1.webp",
+        imageUrl: "/placeholder.svg",
     },
 ];
 
@@ -108,25 +108,27 @@ export default function Team() {
     return (
         <section className="py-32">
             <div className="container flex flex-col items-center text-center">
-                <p className="semibold">We're hiring</p>
+                <p className="semibold">El Equipo de Trenza Comunicaciones</p>
                 <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
-                    Meet our team
+                    El Equipo de Trenza Comunicaciones
                 </h2>
                 <p className="mb-8 max-w-3xl text-muted-foreground lg:text-xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Elig doloremque mollitia fugiat omnis! Porro facilis quo
-                    animi consequatur. Explicabo.
+                    Nuestro equipo está formado por profesionales apasionados
+                    por el marketing digital, el diseño gráfico, y la fotografía
+                    profesional. Nos comprometemos a brindarte soluciones
+                    innovadoras y efectivas para llevar tu negocio al siguiente
+                    nivel en el mundo digital.
                 </p>
                 <div className="flex w-full flex-col justify-center gap-2 sm:flex-row">
                     <button
                         data-slot="button"
-                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0 border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 has-[>svg]:px-3 w-full sm:w-auto"
+                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0 border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 has-[>svg]:px-3 w-full sm:w-auto"
                     >
                         Secondary
                     </button>
                     <button
                         data-slot="button"
-                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0 bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 w-full sm:w-auto"
+                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 focus-visible:ring-4 focus-visible:outline-1 aria-invalid:focus-visible:ring-0 bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 w-full sm:w-auto"
                     >
                         Primary
                     </button>
