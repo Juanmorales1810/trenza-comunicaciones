@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 export default function ContactPage() {
     return (
-        <section className="relative mx-2.5 mt-2.5 rounded-t-2xl w-full max-w-5xl rounded-b-[36px] bg-[url(/image/hero/chart.jpeg)] bg-cover bg-center bg-no-repeat py-32 lg:mx-4">
+        <section className="relative px-4 mx-2.5 mt-2.5 rounded-t-2xl w-full max-w-5xl rounded-b-[36px] bg-[url(/image/hero/chart.jpeg)] bg-cover bg-center bg-no-repeat py-32 lg:mx-4">
             <div className="container max-w-2xl mx-auto">
                 <h1 className="text-center text-4xl font-semibold tracking-tight text-zinc-950 lg:text-5xl">
                     Listo para Transformar Tu Negocio Digitalmente?
