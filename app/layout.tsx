@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Noise from "@/components/noise";
 import Footer from "@/components/interface/Footer";
+import { Header } from "@/components/interface/Header";
 
 export const metadata: Metadata = {
     title: "Trenza Comunicaciones",
@@ -26,6 +27,7 @@ export default function RootLayout({
                 <div className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:6rem_4rem]">
                     <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#ed5e2a,transparent)]"></div>
                 </div>
+                <Header />
                 {children}
                 <Footer />
             </body>
