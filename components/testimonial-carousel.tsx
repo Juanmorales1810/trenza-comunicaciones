@@ -138,7 +138,7 @@ export default function TestimonialCarousel() {
                             key={index}
                             className="min-w-0 shrink-0 grow-0 basis-full"
                         >
-                            <div className="grid grid-cols-1 gap-y-10 pb-14 pl-8 pr-4 pt-4 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">
+                            <div className="grid grid-cols-1 gap-y-10 pb-14 px-4 pt-4 sm:pt-8 lg:grid-cols-3 lg:gap-10 lg:p-20">
                                 {/* Person Image and Info */}
                                 <div className="flex flex-col items-center justify-center">
                                     <Image
