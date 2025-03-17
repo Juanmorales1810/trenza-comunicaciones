@@ -6,7 +6,7 @@ import { Badge } from "../ui/badge";
 export default function Testimonial() {
     return (
         <section className="py-32">
-            <div className="container">
+            <div className="container px-4">
                 <Badge variant={"outline"} className="mb-6 text-white">
                     Casos de Éxito
                 </Badge>
