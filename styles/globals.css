@@ -88,3 +88,17 @@ body {
         @apply bg-background text-foreground;
     }
 }
+header {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+}
+
+@keyframes nav-shadown {
+    0% {
+        @apply opacity-0 shadow-none ring-0;
+    }
+    to {
+        @apply shadow-lg;
+    }
+}
