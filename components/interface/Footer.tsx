@@ -13,8 +13,8 @@ export default function Footer() {
                         <Image
                             src="/image/logoTrenza.png"
                             alt="logo"
-                            width="129"
-                            height="32"
+                            width="260"
+                            height="64"
                             className="dark:invert"
                         />
                     </Link>
