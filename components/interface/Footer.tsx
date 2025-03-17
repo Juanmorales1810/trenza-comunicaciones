@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <section className="">
-            <div className="w-full px-24 flex justify-between gap-8 border-x border-t py-4 max-md:flex-col lg:py-8">
+            <div className="w-full px-4 flex justify-between gap-8 border-x border-t py-4 max-md:flex-col md:px-24 lg:py-8">
                 <div className="mb-8 flex-1">
                     <Link href="/" className="flex items-center gap-2">
                         <Image
@@ -85,13 +85,13 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="text-muted-foreground-subtle w-full px-24 border-x border-t border-b py-4 text-sm tracking-[-0.28px] lg:py-8">
+            <div className="text-muted-foreground-subtle w-full px-4 border-x border-t border-b py-4 text-sm tracking-[-0.28px] md:px-24 lg:py-8">
                 <p>
                     © {new Date().getFullYear()} Trenza Comunicaciones. All
                     rights reserved.
                 </p>
             </div>
-            <div className="w-full px-24 border-x hidden md:block">
+            <div className="w-full px-4 border-x hidden md:block md:px-24">
                 <TextPressure
                     text="Trenza"
                     flex={true}
