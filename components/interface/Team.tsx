@@ -1,13 +1,13 @@
-import { Dribbble, Github, Linkedin } from "lucide-react";
+import { BriefcaseBusiness, Dribbble, Github, Linkedin } from "lucide-react";
 import React from "react";
 
 const team = [
     {
         id: 1,
-        name: "Name",
+        name: "Pablo Valdebenito",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ex?",
-        role: "Role",
+            "Especialista en Edición y Videos, encargado de la postproducción audiovisual, montaje y optimización de contenido visual para diversas plataformas. Su enfoque está en lograr una narrativa atractiva a través de la edición, efectos visuales y mejoras de calidad.",
+        role: "Editor y Videógrafo",
         links: [
             {
                 id: 1,
@@ -29,35 +29,35 @@ const team = [
     },
     {
         id: 2,
-        name: "Name",
+        name: "Juan Morales",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ex?",
-        role: "Role",
+            "Desarrollador web con experiencia en Programación y Diseño Web. Se especializa en la creación y optimización de sitios web modernos, asegurando funcionalidad, estética y experiencia de usuario fluida. Su trabajo combina código y diseño para lograr plataformas intuitivas y eficientes.",
+        role: "Desarrollador FullStack",
         links: [
             {
                 id: 1,
                 icon: <Github className="size-4" />,
-                url: "#",
+                url: "https://github.com/Juanmorales1810",
             },
             {
                 id: 2,
                 icon: <Linkedin className="size-4" />,
-                url: "#",
+                url: "https://www.linkedin.com/in/juan-exequiel-morales/",
             },
             {
                 id: 3,
-                icon: <Dribbble className="size-4" />,
-                url: "#",
+                icon: <BriefcaseBusiness className="size-4" />,
+                url: "https://juan-morales.is-a.dev/",
             },
         ],
         imageUrl: "/placeholder.svg",
     },
     {
         id: 3,
-        name: "Name",
+        name: "Valeria Pizarro",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ex?",
-        role: "Role",
+            "Diseñadora con un enfoque en Diseño, Diagramación e Ilustración. Su labor abarca la creación de identidades visuales, composición de material gráfico y producción de ilustraciones personalizadas. Su trabajo se orienta a transmitir mensajes visuales impactantes y coherentes con la marca.",
+        role: "Diseñadora Gráfica",
         links: [
             {
                 id: 1,
@@ -79,10 +79,10 @@ const team = [
     },
     {
         id: 4,
-        name: "Name",
+        name: "Felipe Pizarro",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, ex?",
-        role: "Role",
+            "Director de Agencia con experiencia en Fotografía, Paid Media Management, Marketing y Ventas. Lidera estrategias de crecimiento, publicidad digital y generación de contenido visual de alta calidad. Su visión estratégica combina creatividad y análisis de mercado para potenciar marcas y maximizar su alcance.",
+        role: "Director de Agencia",
         links: [
             {
                 id: 1,
@@ -107,7 +107,7 @@ const team = [
 export default function Team() {
     return (
         <section className="py-32">
-            <div className="container flex flex-col items-center text-center">
+            <div className="container px-4 flex flex-col items-center text-center">
                 <p className="semibold">El Equipo de Trenza Comunicaciones</p>
                 <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
                     El Equipo de Trenza Comunicaciones
